@@ -1,14 +1,14 @@
-select 
-    column_name, 
-    column_type, 
-    is_nullable, 
-    column_key, 
-    column_default, 
-    extra
-from 
-    information_schema.columns
-where 
-    table_schema = database()
-    and table_name = 'books'
-order by 
-    ordinal_position;
+SELECT 
+    COLUMN_NAME, 
+    COLUMN_TYPE, 
+    IS_NULLABLE, 
+    COLUMN_KEY, 
+    COLUMN_DEFAULT, 
+    EXTRA
+FROM 
+    INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = 'alx_book_store'
+    AND TABLE_NAME = 'Books'
+ORDER BY 
+    ORDINAL_POSITION;
